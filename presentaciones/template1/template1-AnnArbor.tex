@@ -1,0 +1,120 @@
+\documentclass[aspectratio=169]{beamer}
+
+\hypersetup{pdfpagemode=FullScreen}
+
+% Paquetes requeridos
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\newcommand{\logoinstitucion}{logo-epn.png}
+
+% Colores
+\definecolor{color-bg-titulo}{HTML}{16213e}
+\definecolor{color-bg-frame-title}{HTML}{CBD8DD}
+\definecolor{color-bg-paleta-primaria}{HTML}{A50035}
+\definecolor{color-bg-paleta-secundaria}{HTML}{DAE7EC}
+\definecolor{color-bg-paleta-terciaria}{HTML}{16213e}
+\definecolor{color-font-title}{HTML}{0f3460}
+\definecolor{color-font-paletas}{HTML}{FFFFFF}
+
+% Ajustes para Beamer
+\usetheme{AnnArbor}
+%\AtBeginDocument{\setbeamertemplate{logo}{}}
+\setbeamercolor{titlelike}{parent=structure, bg=color-bg-titulo, fg=white}
+\setbeamercolor{frametitle}{bg=color-bg-frame-title!30, fg=color-font-title}
+\setbeamercolor{palette primary}{bg=color-bg-paleta-primaria, fg=white}
+\setbeamercolor{palette secondary}{bg=color-bg-paleta-secundaria!50, fg=color-bg-titulo}
+\setbeamercolor{palette tertiary}{bg=color-bg-paleta-terciaria, fg=color-font-paletas}
+\setbeamercolor{section number projected}{bg=color-bg-titulo,fg=white}
+\setbeamercolor{section in toc}{fg=color-font-title}
+\setbeamertemplate{sections/subsections in toc}[ball]
+\setbeamertemplate{frametitle}
+{
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,ht=1.9em,wd=\paperwidth]{frametitle}
+        \vbox{}\vskip-2ex%
+        \strut\insertframetitle\strut
+        \vskip-2.9ex%
+        \hfill
+        \vspace*{-0.1cm}
+        \includegraphics[scale=0.025]{\logoinstitucion}
+    \end{beamercolorbox}
+}
+
+% Ajustes para la carátula
+\title[Título corto]{Título de la presentación}
+\subtitle{Subtítulo}
+\author{Nombre Apellido}
+\institute[E.P.N]{Escuela Politécnica Nacional \par Facultad de Ingeniería en Sistemas \par Nombre de la materia}
+\date{13 de Febrero del 2021}
+\IfFileExists{logo-facultad-fis.jpg}{
+    \titlegraphic{\includegraphics[scale=0.24]{logo-facultad-fis.jpg}}
+    \logo{\includegraphics[scale=0.15]{logo-facultad-fis.jpg}}
+}{}
+
+
+\begin{document}
+
+    {
+        \setbeamertemplate{logo}{}
+        \frame{\titlepage}
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \frame{
+        \frametitle{Contenido}
+        \tableofcontents
+        }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{Introducción}
+    \frame{
+        \frametitle{Introducción}
+        % Contenido %
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{Sección 1}
+    \begin{frame}{Tema 1 de la sección 1}
+        En este punto, usted puede listar sus ideas:
+        \begin{itemize}
+            \item Idea 1
+            \item Idea 2
+            \item item 3
+            \item Item 4
+        \end{itemize}
+    \end{frame}
+    \begin{frame}{Tema 2 de la sección 1}
+        % Contenido %
+    \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{Sección 2}
+    \subsection{Subsección 1 de la Sección 2}
+    \frame{
+        \frametitle{Título de la Subseccción 1.2}
+        % Contenido %
+    }
+    \subsection{Subsección 2 de la Sección 2}
+    \frame{
+        \frametitle{Título de la Subseccción 2.2}
+        % Contenido %
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{Conclusiones y recomendaciones}
+    \frame{
+        \frametitle{Conclusiones}
+        % Contenido %
+    }
+    \frame{
+        \frametitle{Recomendaciones}
+        % Contenido %
+    }
+
+\end{document}
