@@ -4,9 +4,20 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 
+% Colores
+\definecolor{color-bg-titulo}{HTML}{F2F8FB}
+\definecolor{color-bg-frame-title}{HTML}{ececec}
+\definecolor{color-bg-paleta-secundaria}{HTML}{16213e}
+\definecolor{color-font-title}{HTML}{0f3460}
+
+
+
 % Ajustes para Beamer
 \usetheme{Berlin}
 \AtBeginDocument{\setbeamertemplate{logo}{}}
+\setbeamercolor{titlelike}{parent=structure,fg=color-font-title, bg=color-bg-titulo}
+\setbeamercolor{frametitle}{fg=color-font-title, bg=color-bg-frame-title!40}
+\setbeamercolor*{palette secondary}{bg=color-bg-paleta-secundaria, fg = white}
 
 % Ajustes para la carátula
 \title{Título de la presentación}
