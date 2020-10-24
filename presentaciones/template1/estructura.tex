@@ -1,0 +1,40 @@
+\hypersetup{pdfpagemode=FullScreen}
+
+% Paquetes requeridos
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\newcommand{\logoinstitucion}{logo-epn.png}
+
+% Colores
+\definecolor{color-bg-titulo}{HTML}{16213e}
+\definecolor{color-bg-frame-title}{HTML}{CBD8DD}
+\definecolor{color-bg-paleta-primaria}{HTML}{A50035}
+\definecolor{color-bg-paleta-secundaria}{HTML}{DAE7EC}
+\definecolor{color-bg-paleta-terciaria}{HTML}{16213e}
+\definecolor{color-font-title}{HTML}{0f3460}
+\definecolor{color-font-paletas}{HTML}{FFFFFF}
+
+% Ajustes para Beamer
+\usetheme{AnnArbor}
+\setbeamercolor{titlelike}{parent=structure, bg=color-bg-titulo, fg=white}
+\setbeamercolor{frametitle}{bg=color-bg-frame-title!30, fg=color-font-title}
+\setbeamercolor{palette primary}{bg=color-bg-paleta-primaria, fg=white}
+\setbeamercolor{palette secondary}{bg=color-bg-paleta-secundaria!50, fg=color-bg-titulo}
+\setbeamercolor{palette tertiary}{bg=color-bg-paleta-terciaria, fg=color-font-paletas}
+\setbeamercolor{section number projected}{bg=color-bg-titulo,fg=white}
+\setbeamercolor{section in toc}{fg=color-font-title}
+\setbeamertemplate{sections/subsections in toc}[ball]
+\setbeamertemplate{frametitle}
+{
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,ht=1.9em,wd=\paperwidth]{frametitle}
+        \vbox{}\vskip-2ex%
+        \strut\insertframetitle\strut
+        \vskip-2.9ex%
+        \hfill
+        \vspace*{-0.1cm}
+        \includegraphics[scale=0.025]{\logoinstitucion}
+    \end{beamercolorbox}
+}
+
