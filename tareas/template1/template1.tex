@@ -1,0 +1,69 @@
+\documentclass[12pt, a4paper]{article}
+
+% Uso de paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[placement=top]{background}
+\setlength{\fboxsep}{0em}
+\setlength{\fboxrule}{0em}
+
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\definecolor{c}{HTML}{181C38}
+\renewcommand\fbox{\fcolorbox{red}{c}}
+
+\usepackage{multicol}
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    contents={
+    \fbox{
+        \rule[0cm]{\paperwidth}{4cm}
+        }
+    }
+}
+\setlength{\parindent}{0pt}
+
+
+\geometry{
+    top = 10mm,
+    bottom = 20mm,
+    left = 25mm,
+    right = 25mm
+}
+\begin{document}
+\BgThispage
+\begin{multicols}{2}
+    \begin{center}
+        \includegraphics[scale=0.09]{logo-epn.png}
+    \end{center}
+    \vfill\null
+    \columnbreak
+    \par
+    \vspace*{-0.3cm}
+    \textcolor{white}{\bf{Escuela Politécnica Nacional}} \par
+    \textcolor{white}{\bf{Facultad de Ingeniería en Sistemas}} \par
+    \textcolor{white}{\bf{Carrera de Ingeniería de Software}} \par
+    \vfill\null
+    \columnbreak
+\end{multicols}
+\vspace*{0.2cm}
+\begin{multicols} {2}
+{
+\textbf{Nombre:} Alejandro Llanganate \par
+\textbf{Fecha:} 12 de Octubre del 2020
+\vfill\null
+\columnbreak
+
+\noindent\textbf{Docente:} Nombre Apellido \par
+\textbf{Materia:} Inteligencia de negocios
+}
+\end{multicols}
+
+{\centering\section*{Título del deber}}
+Contenido
+
+\end{document}
